@@ -72,6 +72,25 @@
       }
     },
     {
+      "team": 4646,
+      /* 2026 alpha robot */
+      "robot_name": "alpha2026",
+      "data": {
+        "calibration": [
+          {% include 'frc/vision/constants/calibration_orin1-4646-0_cam-25-07_2025-02-18_13-23-39.json' %},
+          {% include 'frc/vision/constants/calibration_orin-4646-2_cam-25-09_2025-03-06_15-37-04.json' %},
+          {% include 'frc/vision/constants/calibration_orin-4646-3_cam-25-10_2025-03-06_15-37-04.json' %},
+          {% include 'frc/vision/constants/calibration_orin1-4646-0_cam-25-12_2025-02-18_13-08-36.json' %}
+        ],
+        "default_camera_stream_settings": {
+          "image_width": 1600,
+          "image_height": 1304,
+          "exposure_100us": 100,
+          "gain": 0
+        }
+      }
+    },
+    {
       "team": 1868,
       "robot_name": "bot1",
       "data": {

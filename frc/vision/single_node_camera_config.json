@@ -121,15 +121,15 @@
       "num_readers": 4,
       "source_node": "orin",
       "logger": "NOT_LOGGED",
-      "channel_storage_duration": 100000000,
+      "channel_storage_duration": 2000000000,
       "max_size": 4172800,
-      "frequency": 125
+      "frequency": 100
     },
     {
       "name": "/camera0/gray",
       "type": "frc.vision.TargetMap",
       "source_node": "orin",
-      "frequency": 125
+      "frequency": 100
     },
     {
       "name": "/camera1/coral",
@@ -156,21 +156,21 @@
       "name": "/camera0/gray",
       "type": "foxglove.ImageAnnotations",
       "source_node": "orin",
-      "frequency": 125,
+      "frequency": 100,
       "max_size": 2048
     },
     {
       "name": "/camera0/gray",
       "type": "frc.vision.TurboJpegDecoderStatus",
       "source_node": "orin",
-      "frequency": 2
+      "frequency": 100
     },
     {
       "name": "/camera0/gray",
       "type": "frc.vision.swerve_localizer.Visualization",
       "source_node": "orin",
       "max_size": 50000,
-      "frequency": 125
+      "frequency": 100
     },
     {
       "name": "/camera1",
@@ -197,33 +197,33 @@
       "logger": "NOT_LOGGED",
       "channel_storage_duration": 100000000,
       "max_size": 4172800,
-      "frequency": 125
+      "frequency": 100
     },
     {
       "name": "/camera1/gray",
       "type": "frc.vision.TargetMap",
       "source_node": "orin",
-      "frequency": 125
+      "frequency": 100
     },
     {
       "name": "/camera1/gray",
       "type": "foxglove.ImageAnnotations",
       "source_node": "orin",
-      "frequency": 125,
+      "frequency": 100,
       "max_size": 2048
     },
     {
       "name": "/camera1/gray",
       "type": "frc.vision.TurboJpegDecoderStatus",
       "source_node": "orin",
-      "frequency": 2
+      "frequency": 100
     },
     {
       "name": "/camera1/gray",
       "type": "frc.vision.swerve_localizer.Visualization",
       "source_node": "orin",
       "max_size": 50000,
-      "frequency": 125
+      "frequency": 100
     },
     {
       "name": "/camera2",
@@ -303,19 +303,19 @@
       "logger": "NOT_LOGGED",
       "channel_storage_duration": 100000000,
       "max_size": 4172800,
-      "frequency": 125
+      "frequency": 100
     },
     {
       "name": "/camera3/gray",
       "type": "frc.vision.TargetMap",
       "source_node": "orin",
-      "frequency": 125
+      "frequency": 100
     },
     {
       "name": "/camera3/gray",
       "type": "foxglove.ImageAnnotations",
       "source_node": "orin",
-      "frequency": 125,
+      "frequency": 100,
       "max_size": 2048
     },
     {
@@ -329,7 +329,7 @@
       "type": "frc.vision.swerve_localizer.Visualization",
       "source_node": "orin",
       "max_size": 50000,
-      "frequency": 125
+      "frequency": 100
     },
     {
       "name": "/aos",
@@ -388,7 +388,7 @@
     {
       "name": "camera_reader2",
       "executable_name": "camera_reader",
-      "args": ["--ignore_timestamps", "--viddevice=/dev/videoc", "--isp_latency_ms=0"],
+      "args": ["--ignore_timestamps", "--viddevice=/dev/videod", "--isp_latency_ms=0"],
       "maps": [{
         "match": {
           "name": "/camera"
@@ -402,7 +402,7 @@
     {
       "name": "camera_reader3",
       "executable_name": "camera_reader",
-      "args": ["--ignore_timestamps", "--viddevice=/dev/videod", "--isp_latency_ms=0"],
+      "args": ["--ignore_timestamps", "--viddevice=/dev/videoc", "--isp_latency_ms=0"],
       "maps": [{
         "match": {
           "name": "/camera"
