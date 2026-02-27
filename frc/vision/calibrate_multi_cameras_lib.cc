@@ -53,10 +53,10 @@ using frc::vision::VisualizeRobot;
 NodeList CreateNodeList() {
   NodeList result;
 
-  result.cameras.push_back({.node_name = "orin", .camera_number = 3});
   result.cameras.push_back({.node_name = "orin", .camera_number = 0});
-  result.cameras.push_back({.node_name = "orin", .camera_number = 2});
   result.cameras.push_back({.node_name = "orin", .camera_number = 1});
+  result.cameras.push_back({.node_name = "orin", .camera_number = 2});
+  result.cameras.push_back({.node_name = "orin", .camera_number = 3});
 
   result.fixed_camera = 1;
 
@@ -64,7 +64,7 @@ NodeList CreateNodeList() {
 }
 
 std::map<std::string, int> CreateOrderingMap(const NodeList &node_list) {
-  std::map<std::string, int> map;
+  std::map<std::string, int> map;S
 
   for (uint i = 0; i < node_list.cameras.size(); i++) {
     map.insert({node_list.cameras.at(i).camera_name(), i});
