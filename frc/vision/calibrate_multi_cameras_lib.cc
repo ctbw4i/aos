@@ -64,7 +64,7 @@ NodeList CreateNodeList() {
 }
 
 std::map<std::string, int> CreateOrderingMap(const NodeList &node_list) {
-  std::map<std::string, int> map;S
+  std::map<std::string, int> map;
 
   for (uint i = 0; i < node_list.cameras.size(); i++) {
     map.insert({node_list.cameras.at(i).camera_name(), i});
