@@ -35,6 +35,11 @@ table FieldMap {
 
   // Type of the field. "frc" for frc.
   type:string (id: 3);
+
+  // Wildcard: Base64-encoded PNG image of the field layout (provided by Limelight's 
+  // .fmap format). Not used by our code but present here so the JSON 
+  // parser doesn't reject the file and crash network_tables_publisher 
+  pngBase64:string (id: 4);
 }
 
 root_type FieldMap;
