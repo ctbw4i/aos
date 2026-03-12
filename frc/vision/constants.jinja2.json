@@ -74,6 +74,7 @@
     {
       "team": 4646,
       /* 2026 alpha robot */
+      /* 15 was the exposure used at Winona, 60 was the exposure used in the shop*/ 
       "robot_name": "alpha2026",
       "data": {
         "calibration": [
@@ -85,7 +86,7 @@
         "default_camera_stream_settings": {
           "image_width": 1600,
           "image_height": 1304,
-          "exposure_100us": 15,
+          "exposure_100us": 60, 
           "gain": 0
         }
       }
