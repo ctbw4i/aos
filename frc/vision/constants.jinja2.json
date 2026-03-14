@@ -86,6 +86,26 @@
         "default_camera_stream_settings": {
           "image_width": 1600,
           "image_height": 1304,
+          "exposure_100us": 15, 
+          "gain": 0
+        }
+      }
+    },
+    {
+      "team": 4646,
+      /* 2026 comp robot */
+      /* 15 was the exposure used at Winona, 60 was the exposure used in the shop */ 
+      "robot_name": "blackfang",
+      "data": {
+        "calibration": [
+          {% include 'frc/vision/constants/calibration_orin-4646-0_cam-26-12_2026-03-05_16-30-28.json' %},
+          {% include 'frc/vision/constants/calibration_orin-4646-1_cam-26-13_2026-03-14_12-11-17.json' %},
+          {% include 'frc/vision/constants/calibration_orin-4646-2_cam-26-14_2026-03-05_16-30-28.json' %},
+          {% include 'frc/vision/constants/calibration_orin-4646-3_cam-26-15_2026-03-05_16-30-28.json' %}
+        ],
+        "default_camera_stream_settings": {
+          "image_width": 1600,
+          "image_height": 1304,
           "exposure_100us": 60, 
           "gain": 0
         }
