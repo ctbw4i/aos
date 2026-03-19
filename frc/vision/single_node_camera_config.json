@@ -581,6 +581,8 @@
     {
       "name": "localizer_main",
       "args": ["--max_implied_teleop_yaw_error=90"],
+      "args": ["--max_implied_teleop_yaw_error=90",
+      "--do_xytheta_corrections"],
       "nodes": [ "orin" ]
     },
     {
