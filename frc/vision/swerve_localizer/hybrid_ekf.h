@@ -217,6 +217,8 @@ class HybridEkf {
       : force_dt_(force_dt) {
     InitializeMatrices();
   }
+  
+  State &mutable_X_hat() { return X_hat_; }
 
   // Set the initial guess of the state. Can only be called once, and before
   // any measurement updates have occurred.

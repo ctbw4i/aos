@@ -246,7 +246,7 @@ void Localizer::HandleChassisSpeeds(
   const double theta_error = aos::math::NormalizeAngle(
       ekf_.X_hat(StateIdx::kTheta) - roborio_pose_fetcher_->theta());
 
-  if (std::abs(theta_error) > 0.4) {
+  if (std::abs(theta_error) > 1.4) {
     ++heading_resets_;
     // TODO(austin): Count this and display it.
     VLOG(1) << "Resetting, theta too far off, was "
@@ -259,6 +259,8 @@ void Localizer::HandleChassisSpeeds(
                                .finished(),
                            NominalCovariance());
   }
+
+  ekf_.mutable_X_hat()(StateIdx::kTheta) = roborio_pose_fetcher_->theta();
 
   t_ = sample_time_orin;
   // We don't actually use the down estimator currently, but it's really
